@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+</head>
+<body>
+	<table class="main">
+		<tr id="head">
+			<td>
+				Любкин Андрей Сергеевич, P3214, Вариант 2510
+			</td>
+		</tr>
+		<tr id="canvas_row">
+			<td>
+				<canvas id="canvas" width="450px" height="450px"></canvas>
+			</td>
+		</tr>
+		<tr id="form_row">
+			<td>
+				<form id="form" action="handler.php">
+					<table id="x_table">
+						<tr id="x_row">
+							<td class="letter">X:</td>
+							<td>
+								<input id="x" serialize="true" type="text" name="X" onchange="validate()" oninput="validate()" title="X&isin;(-3; 5)">
+							</td>
+							<td class="valid_text">
+								Enter correct arguments
+							</td>
+						</tr>
+					</table>
+
+					<table id="y_table">
+						<tr id="y_row">
+							<td class="letter">Y:</td>
+							<td>
+								<input class="select_button" type="button" name="Y" id="-2" value="-2">
+							</td>
+							<td>
+								<input class="select_button" type="button" name="Y" id="-1.5" value="-1.5">
+							</td>
+							<td>
+								<input class="select_button" type="button" name="Y" id="-1" value="-1">
+							</td>
+							<td>
+								<input class="select_button" type="button" name="Y" id="-0.5" value="-0.5">
+							</td>
+							<td>
+								<input class="select_button" type="button" name="Y" id="0" value="0">
+							</td>
+							<td>
+								<input class="select_button" type="button" name="Y" id="0.5" value="0.5">
+							</td>
+							<td>
+								<input class="select_button" type="button" name="Y" id="1" value="1">
+							</td>
+							<td>
+								<input class="select_button" type="button" name="Y" id="1.5" value="1.5">
+							</td>
+							<td>
+								<input class="select_button" type="button" name="Y" id="2" value="2">
+							</td>
+							<td class="valid_text">
+								to unable
+							</td>
+						</tr>
+					</table>
+
+					<table id="r_table">
+						<tr id="r_row">
+							<td class="letter">R:</td>
+							<td>
+								<input type="checkbox" name="R" value="1" serialize="false">1
+							</td>
+							<td>
+								<input type="checkbox" name="R" value="2" serialize="false">2
+							</td>
+							<td>
+								<input type="checkbox" name="R" value="3" serialize="false">3
+							</td>
+							<td>
+								<input type="checkbox" name="R" value="4" serialize="false">4
+							</td>
+							<td>
+								<input type="checkbox" name="R" value="5" serialize="false">5
+							</td>
+							<td class="valid_text">
+								the "Check" button
+							</td>
+						</tr>
+					</table>
+
+					<table id="button_table">
+						<tr id="button_row">
+							<td>
+								<input type="button" name="check" id="check" value="Check" disabled onclick="form_submit()">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</td>
+		</tr>
+		<tr id="table_row">
+			<td>
+				<table class="result">
+					<thead>
+						<td>X</td>
+						<td>Y</td>
+						<td>R</td>
+						<td>Result</td>
+						<td>Working time</td>
+						<td>Current time</td>
+					</thead>
+					<tbody id="table_body"></tbody>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<script type="text/javascript" src="js/drawer.js"></script>
+	<script type="text/javascript" src="js/valid.js"></script>
+	<script type="text/javascript" src="js/table.js"></script>
+</body>
+</html>

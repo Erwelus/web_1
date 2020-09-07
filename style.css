@@ -1,0 +1,60 @@
+.result{
+	border: 2px solid black;
+	border-collapse: collapse;
+	width: 100%;
+	margin: auto;
+	margin-bottom: 5px;
+}
+
+table.result td{/* Контекстный селектор */
+	border: 1px solid black;
+	overflow: auto;
+	overflow-x:scroll;
+}
+
+body{ /*Наследование: размер шрифта и выравнивание*/
+	font-size: 20px;
+	text-align: center;
+	background-image: url(images/back.jpg);
+	background-size: 100%;
+}
+
+table.main{
+	background-color: #DB6B0AFF;
+	margin: auto;
+	border: 1px solid #DB6B0AFF;
+	border-radius: 10px;
+}
+
+#head{ /* Каскадирование: размер шрифта выбирается заданный непосредственно элементу, а не родительский; */
+	font-size: 35px;
+	font-family: Calibri;
+	font-weight: 800;
+}
+
+#head > td{ /*Селектор потомств*/
+	border-bottom: 3px solid black;
+}
+
+.letter:first-letter{/*Селектор псевдоэлементов*/
+	font-size: 21px;
+}
+
+#x:hover{ /*Селектор псевдоклассов */
+	background-color: #A8FCFFFF;
+}
+
+#canvas{
+	background-color: white;
+	margin-top: 10px;
+}
+
+#button_table{
+	margin: auto;
+}
+
+.valid_text{
+	position: absolute;
+	left: 55%;
+}
+
